@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    http-equiv="Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{onclick}'"
+    content="default-src 'self'; img-src https://*; child-src 'none';" />
+    <title>Options</title>
+</head>
+<body>
+        <p>Choose what you want to summarize</p>
+        <select id="option">
+            <option value="red">Entire Website</option>
+            <option value="green">License Agreement</option>
+        </select>
+        <br><br>
+        
+        <p>Enter your api key (go to https://console.llama-api.com/account/my-account to create an account and copy the api key under API Token)</p>
+        <p>Please keep in mind that this free api key is needed to use Ai to summarize the website. You shouldn't provide any payment details and choose the free plan for the api.</p>
+        <label for="apikey">Api Key:</label>
+        <input type="text" id="apikey" name="apikey"><br><br>
+        <div id="statuskey"></div>
+        <button id="save">Save</button>
+
+        <script src="options.js"></script>
+</body>
+</html>

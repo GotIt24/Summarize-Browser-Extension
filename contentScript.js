@@ -1,0 +1,1 @@
+// alert("Create an Account and copy the Api key into the input field under options of this extension");

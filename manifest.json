@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Summarize with AI",
+  "version": "0.0.1",
+  "description": "Simple Chrome Extension to summarize content on a website using Ai",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Summarize Website",
+    "default_popup": "popup.html"
+
+  },
+  "options_page": "options.html",
+  "background":{
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.llama-api.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
